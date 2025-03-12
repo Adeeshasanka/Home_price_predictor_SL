@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Price Predictor</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <div class="'img"></div>
+
+        <form class="form" action="/predict_house_price" method="POST">
+
+            <h3>Total area (suqare feet):</h3>
+                <input class="area" type="number" id="sqft" class="floatLabel", name="sqftarea" placeholder="1000">
+
+            <h3>Land area (perches):</h3>
+                <input class="area" type="number" id="sqft" class="floatLabel", name="landarea" placeholder="10">
+
+            <h3>Number of Bedrooms</h3>
+            <div>
+                <select class="bedrooms" name="bedroom" id="bed">
+                    <option value="" disabled="disabled" selected="selected">Select number of bedrooms</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                </select>
+            </div>
+
+            <h3>Number of Bathrooms</h3>
+
+            <div>
+                <select class="bathrooms" name="bathroom" id="bath">
+                    <option value="" disabled="disabled" selected="selected">Select number of bathrooms</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                </select>
+            </div>
+
+		<h3>Town</h3>
+        <div>
+            <select class="town" name="town" id="town">
+                <option value="" disabled="disabled" selected="selected">Choose a Town</option>
+                    {% for town in towns %}
+                        <option>{{ town }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+
+        <h3>District</h3>
+        <div>
+            <select class="district" name="district" id="district">
+                <option value="" disabled="disabled" selected="selected">Choose District</option>
+                    {% for district in districts %}
+                        <option>{{ district }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+
+        <button class="submit" type="submit" >Estimate Price</button>
+
+        </form>
+        
+        <div id="uiEstimatedPrice" class="result">	
+            <h4>Rs: {{ estimated_price }}</h4> 
+        </div>
+
+    </body>
+
+</html>
