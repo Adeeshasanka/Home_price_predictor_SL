@@ -1,0 +1,48 @@
+body {
+    background-image: url('house_scheme.jpg');
+    background-size: cover; /* Ensures the image covers the entire window */
+    background-position: left; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures the body takes the full height of the viewport */
+    margin: 0; /* Removes any default margin */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+span {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#uiEstimatedPrice {
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(154, 194, 237, 0.8);
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid rgb(123, 201, 253); /* Border color */
+    box-shadow: 0 0 10px rgb(123, 201, 253); /* Glow effect */
+}
+
+.price {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgb(132, 227, 213, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgb(137, 227, 179); /* Border color */
+    box-shadow: 0 0 10px rgb(137, 227, 179); /* Glow effect */
+}

@@ -14,7 +14,7 @@ h5 {
 
 .form {
     width: 35%;
-    height: 80%;
+    height: 90%;
     background-color: rgba(0, 0, 0, 0.6);
     margin-left: 100px;
     padding-top: 2%;
@@ -24,3 +24,19 @@ h5 {
     border-radius: 0px 0px 50px 50px;
 }
 
+.input {
+    height: 3%;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #ccc; /* Added a default border */
+    padding: 2px;
+}
+
+.input:focus {
+    border-color: rgb(0, 142, 250); /* On focus, change border color */
+    outline: none; /* Optionally, remove default outline */
+}
+
+.input-select {
+    height: 2%;
+}

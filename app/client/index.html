@@ -16,14 +16,14 @@
             <div class="mb-3">
 
             <h5>Total area (suqare feet):</h5>
-                <input class="form-control" type="number" id="sqft" class="floatLabel", name="sqftarea" placeholder="1000" required>
+                <input class="input" type="number" id="sqft" class="floatLabel", name="sqftarea" placeholder="1000" required>
 
             <h5>Land area (perches):</h5>
-                <input class="form-control" type="number" id="perch" class="floatLabel", name="landarea" placeholder="10" required>
+                <input class="input" type="number" id="perch" class="floatLabel", name="landarea" placeholder="10" required>
 
             <h5>Number of Bedrooms</h5>
             <div>
-                <select class="form-select" aria-label="Default select example" name="bedroom" id="bed" required>
+                <select class="input-select" aria-label="Default select example" name="bedroom" id="bed" required>
                     <option disabled="disabled" selected="selected">Select number of bedrooms</option>
                         <option>1</option>
                         <option>2</option>
@@ -41,7 +41,7 @@
             <h5>Number of Bathrooms</h5>
 
             <div>
-                <select class="form-select" aria-label="Default select example" name="bathroom" id="bath" required>
+                <select class="input-select" aria-label="Default select example" name="bathroom" id="bath" required>
                     <option disabled="disabled" selected="selected">Select number of bathrooms</option>
                         <option>1</option>
                         <option>2</option>
@@ -58,7 +58,7 @@
 
 		<h5>Town</h5>
         <div>
-            <select class="form-select" aria-label="Default select example" name="town" id="town" required>
+            <select class="input-select" aria-label="Default select example" name="town" id="town" required>
                 <option disabled="disabled" selected="selected">Choose a Town</option>
                     {% for town in towns %}
                         <option>{{ town }}</option>
@@ -68,7 +68,7 @@
 
         <h5>District</h5>
         <div>
-            <select class="form-select" aria-label="Default select example" name="district" id="district" required>
+            <select class="input-select" aria-label="Default select example" name="district" id="district" required>
                 <option disabled="disabled" selected="selected">Choose District</option>
                     {% for district in districts %}
                         <option>{{ district }}</option>
@@ -80,12 +80,7 @@
         <button class="btn btn-primary" style="background-color: green; border-color: green;" onclick="estimate()">Estimate Price</button>
 
         </form>
-        
-        <div style="display: none;" id="uiEstimatedPrice" class="result">	
-            <h4>Rs: {{ estimated_price }}</h4> 
-        </div>
 
-        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     </body>

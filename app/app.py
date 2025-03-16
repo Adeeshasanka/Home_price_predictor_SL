@@ -38,9 +38,9 @@ def predict_house_price():
     estimated_price = util.get_estimated_price(bed,bath,land,sqft,town,district)
 
     response.headers.add('Access-Control-Allow-Origin', "*")
-    return render_template("index.html", towns = Towns, districts = Districts, estimated_price = estimated_price)
+    return render_template("predict.html", estimated_price = estimated_price, sqft = sqft, town = town, district=district, no_bed = bed, no_bath=bath, lan_a = land)
 
 
 if __name__=='__main__':
     print("Starting python flask app for Home price predictor...")
-    app.run(debug=True)
+    app.run(host='0.0.0.0' ,debug=True)
