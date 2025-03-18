@@ -23,7 +23,7 @@
 
             <h5>Number of Bedrooms</h5>
             <div>
-                <select class="input-select" aria-label="Default select example" name="bedroom" id="bed" required>
+                <select class="form-select form-select-sm" name="bedroom" id="bed" required>
                     <option disabled="disabled" selected="selected">Select number of bedrooms</option>
                         <option>1</option>
                         <option>2</option>
@@ -41,7 +41,7 @@
             <h5>Number of Bathrooms</h5>
 
             <div>
-                <select class="input-select" aria-label="Default select example" name="bathroom" id="bath" required>
+                <select class="form-select form-select-sm" aria-label="Default select example" name="bathroom" id="bath" required>
                     <option disabled="disabled" selected="selected">Select number of bathrooms</option>
                         <option>1</option>
                         <option>2</option>
@@ -58,7 +58,7 @@
 
 		<h5>Town</h5>
         <div>
-            <select class="input-select" aria-label="Default select example" name="town" id="town" required>
+            <select class="form-select form-select-sm" aria-label="Default select example" name="town" id="town" required>
                 <option disabled="disabled" selected="selected">Choose a Town</option>
                     {% for town in towns %}
                         <option>{{ town }}</option>
@@ -68,7 +68,7 @@
 
         <h5>District</h5>
         <div>
-            <select class="input-select" aria-label="Default select example" name="district" id="district" required>
+            <select class="form-select form-select-sm" aria-label="Default select example" name="district" id="district" required>
                 <option disabled="disabled" selected="selected">Choose District</option>
                     {% for district in districts %}
                         <option>{{ district }}</option>

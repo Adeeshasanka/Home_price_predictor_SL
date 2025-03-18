@@ -41,8 +41,17 @@ span {
 .price {
     margin-top: 10px;
     padding: 5px;
-    background-color: rgb(132, 227, 213, 0.5);
+    background-color: rgba(107, 224, 207, 0.5);
     border-radius: 10px;
     border: 2px solid rgb(137, 227, 179); /* Border color */
     box-shadow: 0 0 10px rgb(137, 227, 179); /* Glow effect */
+}
+
+.predicted {
+    text-align: center;
+    background-color: rgb(125, 216, 72);
+    padding: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
 }
